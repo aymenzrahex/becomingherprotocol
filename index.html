@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Becoming Her — The 60-Day Reinvention Protocol</title>
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%237a0000%22/><text y=%22.85em%22 font-size=%2272%22 font-family=%22serif%22 fill=%22white%22 text-anchor=%22middle%22 x=%2250%22>B</text></svg>">
+
+<!-- Clarity Tracking -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w0iv808ks3");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --white:#ffffff;--linen:#faf8f5;--ink:#0e0c0a;
+  --red:#7a0000;--gold:#9a7200;
+  --safe-bottom: env(safe-area-inset-bottom);
+}
+
+*{-webkit-tap-highlight-color: transparent; box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--white); color:var(--ink); font-family:-apple-system, BlinkMacSystemFont, "Lato", sans-serif; overflow-x:hidden; line-height:1.4;}
+
+/* TIMER HEADER */
+.sale-header {
+    background: var(--ink); color: var(--white); text-align: center;
+    padding: 10px 5px; font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase; position: sticky; top: 0; z-index: 4000; font-weight: 700;
+}
+#timer { color: #e8d8b0; font-variant-numeric: tabular-nums; margin-left: 5px; }
+
+/* NAVIGATION */
+nav{
+    background:rgba(255,255,255,0.9); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+    height: 54px; display: flex; align-items: center; justify-content: center; gap: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05); position: sticky; top: 34px; z-index: 900;
+}
+.b-logo { background: var(--red); color: white; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-family: serif; font-weight: bold; border-radius: 2px; font-size: 16px;}
+.nav-brand{font-family:"Playfair Display",serif; font-size:16px; font-weight:700; letter-spacing:1px;}
+
+/* HERO SECTION */
+#hero { padding: 30px 20px; text-align: center; }
+.hero-eyebrow { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--red); font-weight: 700; margin-bottom: 6px; display: block; }
+.hero-h1 { font-family:"Playfair Display",serif; font-size: 28px; font-weight: 900; line-height: 1.1; margin-bottom: 20px;}
+
+.hero-book-thumb { width: 110px; height: auto; margin: 0 auto 20px; display: block; box-shadow: 0 12px 30px rgba(0,0,0,0.12); border-radius: 2px; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.hero-book-thumb:hover { transform: scale(1.06); box-shadow: 0 22px 50px rgba(0,0,0,0.22); }
+
+/* PRICE CARD */
+.pricing-card {
+    background: var(--linen); padding: 25px; border-radius: 4px; border: 1px solid rgba(0,0,0,0.05); margin-bottom: 30px;
+}
+.price-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 12px; }
+.was-price { font-size: 14px; text-decoration: line-through; color: rgba(0,0,0,0.3); }
+.is-price { font-size: 40px; font-family: "Playfair Display", serif; font-weight: 900; }
+.offer-badge { background: var(--red); color: white; font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 2px; }
+
+.cta-main {
+    display: block; background: var(--ink); color: white; padding: 18px;
+    font-family: "Playfair Display", serif; font-weight: 700; font-size: 18px;
+    text-decoration: none; border-radius: 2px; text-align: center;
+}
+
+/* USA TRUST SHIELD */
+.apple-pay-shield {
+    display: flex; justify-content: center; align-items: center; gap: 8px;
+    margin-top: 15px; opacity: 0.6;
+}
+.apple-pay-shield span { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+.ap-logo { width: 35px; height: auto; display: block; }
+
+/* THE 1-PARAGRAPH SURGICAL DESCRIPTION */
+.manual-description { padding: 50px 25px; background: var(--white); border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0; }
+.desc-inner { max-width: 650px; margin: 0 auto; text-align: center; }
+.desc-paragraph { font-family: "Cormorant Garamond", "Playfair Display", serif; font-size: 19px; line-height: 1.9; color: var(--ink); font-style: normal; letter-spacing: 0.2px; }
+.desc-paragraph b { color: var(--red); font-style: normal; font-weight: 900; }
+
+/* SECTION REVEAL */
+.reveal { opacity: 0; transform: translateY(20px); transition: 0.8s all ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+/* STICKY FOOTER */
+.sticky-bar {
+    position: fixed; bottom: 0; left: 0; right: 0; background: var(--white);
+    padding: 12px 16px calc(12px + var(--safe-bottom));
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid rgba(0,0,0,0.05); z-index: 3000;
+    transform: translateY(100%); transition: 0.4s transform ease;
+}
+.sticky-bar.show { transform: translateY(0); }
+.sticky-btn { background: var(--red); color: white; padding: 12px 22px; font-size: 11px; font-weight: 800; text-transform: uppercase; text-decoration: none; border-radius: 2px;}
+
+@media(min-width: 860px) {
+    #hero { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 80px; padding: 80px 20px; text-align: left; }
+    .hero-book-thumb { width: 220px; margin: 0; }
+    .pricing-card { width: 450px; padding: 40px; margin: 0;}
+    .desc-paragraph { font-size: 23px; }
+}
+
+/* BOOK PREVIEW MODAL */
+.modal-overlay {
+    display: none; position: fixed; inset: 0; z-index: 9000;
+    background: rgba(0,0,0,0.85); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    align-items: center; justify-content: center; padding: 20px;
+}
+.modal-overlay.active { display: flex; }
+.modal-box {
+    background: #0e0c0a; color: #faf8f5; max-width: 520px; width: 100%;
+    border-radius: 4px; overflow: hidden; position: relative;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+    max-height: 90vh; overflow-y: auto;
+}
+.modal-close {
+    position: absolute; top: 14px; right: 18px; font-size: 22px;
+    cursor: pointer; color: rgba(255,255,255,0.4); background: none;
+    border: none; line-height: 1; z-index: 10;
+}
+.modal-close:hover { color: white; }
+.modal-header {
+    background: var(--red); padding: 18px 24px;
+    font-size: 9px; font-weight: 800; letter-spacing: 2px;
+    text-transform: uppercase; text-align: center;
+}
+.modal-body { padding: 28px 28px 0; }
+.modal-cover-row { display: flex; align-items: center; gap: 20px; margin-bottom: 28px; }
+.modal-cover-img { width: 80px; flex-shrink: 0; box-shadow: 0 8px 24px rgba(0,0,0,0.5); border-radius: 2px; }
+.modal-book-title { font-family: "Playfair Display", serif; font-size: 22px; font-weight: 900; line-height: 1.1; }
+.modal-book-sub { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 6px; }
+.modal-pages { font-size: 10px; color: var(--red); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 8px; }
+
+.modal-section-title {
+    font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(255,255,255,0.35); font-weight: 700; margin-bottom: 14px;
+    padding-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.toc-list { list-style: none; margin-bottom: 28px; }
+.toc-module { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red); margin: 16px 0 8px; }
+.toc-item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 13px; color: rgba(255,255,255,0.75);
+}
+.toc-item span { font-size: 11px; color: rgba(255,255,255,0.25); }
+
+.sample-box {
+    background: rgba(255,255,255,0.04); border-left: 2px solid var(--red);
+    padding: 18px 20px; margin-bottom: 28px; border-radius: 0 2px 2px 0;
+}
+.sample-label { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--red); font-weight: 800; margin-bottom: 10px; }
+.sample-text { font-family: "Playfair Display", serif; font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.7); font-style: italic; }
+
+.modal-cta-section { padding: 20px 28px 28px; background: rgba(255,255,255,0.03); border-top: 1px solid rgba(255,255,255,0.07); }
+.modal-price-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.modal-was { font-size: 13px; text-decoration: line-through; color: rgba(255,255,255,0.25); }
+.modal-is { font-family: "Playfair Display", serif; font-size: 32px; font-weight: 900; }
+.modal-badge { background: var(--red); color: white; font-size: 9px; font-weight: 800; padding: 3px 8px; border-radius: 2px; letter-spacing: 1px; }
+.modal-buy-btn {
+    display: block; background: var(--red); color: white; text-align: center;
+    padding: 16px; font-family: "Playfair Display", serif; font-size: 17px;
+    font-weight: 700; text-decoration: none; border-radius: 2px;
+    transition: opacity 0.2s;
+}
+.modal-buy-btn:hover { opacity: 0.88; }
+.modal-guarantee { font-size: 10px; color: rgba(255,255,255,0.3); text-align: center; margin-top: 10px; letter-spacing: 0.5px; }
+
+/* PREVIEW MODAL */
+.modal-overlay {
+    display: none; position: fixed; inset: 0; z-index: 9000;
+    background: rgba(0,0,0,0.75); backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    align-items: center; justify-content: center; padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal-box {
+    background: #0e0c0a; color: #fff;
+    max-width: 520px; width: 100%; max-height: 88vh;
+    overflow-y: auto; border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.08);
+    animation: modalIn 0.35s ease;
+}
+@keyframes modalIn {
+    from { opacity:0; transform: translateY(24px); }
+    to   { opacity:1; transform: translateY(0); }
+}
+.modal-header {
+    display: flex; align-items: center; gap: 18px;
+    padding: 28px 28px 20px; border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.modal-cover { width: 64px; flex-shrink: 0; border-radius: 2px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+.modal-title { font-family: "Playfair Display", serif; font-size: 20px; font-weight: 900; line-height: 1.2; }
+.modal-subtitle { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #9a7200; margin-top: 5px; font-weight: 700; }
+.modal-close {
+    position: absolute; top: 16px; right: 20px;
+    background: none; border: none; color: rgba(255,255,255,0.4);
+    font-size: 22px; cursor: pointer; line-height: 1; padding: 4px 8px;
+    transition: color 0.2s;
+}
+.modal-close:hover { color: #fff; }
+.modal-section { padding: 22px 28px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.modal-section-title {
+    font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase;
+    color: #9a7200; font-weight: 700; margin-bottom: 14px;
+}
+.modal-toc-item {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 13px; color: rgba(255,255,255,0.75);
+}
+.modal-toc-item:last-child { border-bottom: none; }
+.modal-toc-label { font-family: "Playfair Display", serif; }
+.modal-toc-module {
+    font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+    color: rgba(255,255,255,0.3); font-weight: 700; margin-bottom: 6px; margin-top: 14px;
+}
+.modal-sample {
+    background: rgba(255,255,255,0.03); border-left: 2px solid #7a0000;
+    padding: 16px 18px; border-radius: 2px; margin-top: 4px;
+}
+.modal-sample p {
+    font-family: "Playfair Display", serif; font-size: 13px;
+    line-height: 1.8; color: rgba(255,255,255,0.7); font-style: italic;
+}
+.modal-sample p b { color: #fff; font-style: normal; }
+.modal-cta-wrap { padding: 22px 28px; }
+.modal-cta {
+    display: block; background: #7a0000; color: #fff;
+    text-align: center; padding: 16px; border-radius: 2px;
+    font-family: "Playfair Display", serif; font-weight: 700; font-size: 16px;
+    text-decoration: none; transition: background 0.2s;
+}
+.modal-cta:hover { background: #9a0000; }
+.modal-price-note {
+    text-align: center; font-size: 10px; color: rgba(255,255,255,0.3);
+    letter-spacing: 1px; text-transform: uppercase; margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="sale-header">
+    USA FLASH SALE &mdash; 50% OFF &mdash; ENDS IN <span id="timer">48:00:00</span>
+</div>
+
+<nav>
+    <div class="b-logo">B</div>
+    <span class="nav-brand">BECOMING HER</span>
+</nav>
+
+<section id="hero">
+    <div class="hero-header-desktop">
+        <span class="hero-eyebrow">A 60-Day Reinvention Manual</span>
+        <h1 class="hero-h1">Disappear. <br><span style="color:var(--red); font-style:italic; font-weight:400;">Return Unrecognizable.</span></h1>
+        
+        <a href="#" onclick="openModal();return false;"><img src="https://res.cloudinary.com/di1yyz1yi/image/upload/f_auto,q_auto/small_size_cover_becoming_her_qvdl3v" alt="Becoming Her" class="hero-book-thumb"></a>
+    </div>
+
+    <div class="pricing-card" id="pricing">
+        <div class="price-row">
+            <span class="was-price">$18.90</span>
+            <span class="is-price">$9.45</span>
+            <span class="offer-badge">ACTIVE</span>
+        </div>
+        <a href="https://gumroad.com/checkout?product=itlis&quantity=1" class="cta-main">ACTIVATE PROTOCOL</a>
+        
+        <div class="apple-pay-shield">
+            <img class="ap-logo" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Apple_Pay_logo.svg" alt="Apple Pay">
+            <span>&bull; SECURE DIGITAL DELIVERY</span>
+        </div>
+    </div>
+</section>
+
+<!-- THE ONE-PARAGRAPH HIGH-VALUE DESCRIPTION -->
+<section class="manual-description reveal">
+    <div class="desc-inner">
+        <p class="desc-paragraph">
+            <b>Becoming Her</b> is a 30-page structured self-development guide built across five modules &mdash; <b>Identity, Routine, Aesthetic, Environment,</b> and <b>The 60-Day Challenge.</b> You will learn how to rewrite your self-concept using the <b>Identity Script worksheet,</b> build a disciplined morning and evening protocol that protects your focus and energy, develop a commanding physical presence through posture, body language and a curated capsule wardrobe, and design a living space that reflects the standard you are holding yourself to. The guide closes with a strict <b>60-Day Contract</b> built on five daily non-negotiables &mdash; wake time, movement, reading, nutrition, and journaling &mdash; tracked on a printable consistency grid. Every module includes a fillable worksheet. This is not a book you read and forget. <b>It is a system you work through, one day at a time.</b>
+        </p>
+    </div>
+</section>
+
+<section style="text-align: center; padding: 60px 20px; background: #fafafa;">
+    <h2 style="font-family: 'Playfair Display'; font-size: 22px; margin-bottom: 20px;">You already know who she is. It's time to become her.</h2>
+    <a href="https://gumroad.com/checkout?product=itlis&quantity=1" class="cta-main" style="max-width:340px; margin: 0 auto; background:var(--red);">START DAY 1 — $9.45</a>
+</section>
+
+<footer style="padding: 40px 20px 120px; text-align:center; font-size:9px; opacity:0.35; text-transform: uppercase; letter-spacing: 1.5px; line-height: 2;">
+    © 2026 GLOW UP DIARIES &mdash; GUMROAD USA &nbsp;|&nbsp; INSTANT SECURE PDF DELIVERY &nbsp;|&nbsp; INSTANT ACCESS AFTER PURCHASE &nbsp;|&nbsp; 256-BIT SSL ENCRYPTED
+</footer>
+
+<div class="sticky-bar" id="sticky-bar">
+    <div>
+        <div style="font-family:'Playfair Display'; font-weight:700; font-size:14px;">Becoming Her</div>
+        <div style="color:var(--red); font-weight:700; font-size:12px;">$9.45 <span style="text-decoration:line-through; opacity:0.4; font-size:10px;">$18.90</span></div>
+    </div>
+    <a href="https://gumroad.com/checkout?product=itlis&quantity=1" class="sticky-btn">DOWNLOAD</a>
+</div>
+
+<script>
+/* TIMER LOGIC */
+function startTimer() {
+    const timerDisplay = document.getElementById('timer');
+    const fortyEightHours = 48 * 60 * 60 * 1000;
+    let startTime = localStorage.getItem('becomingHer_v6_timer');
+    if (!startTime) { startTime = Date.now(); localStorage.setItem('becomingHer_v6_timer', startTime); }
+
+    function update() {
+        const now = Date.now();
+        const diff = fortyEightHours - (now - startTime);
+        if (diff <= 0) { timerDisplay.textContent = "OFFER ENDED"; return; }
+        const h = Math.floor(diff / 36e5), m = Math.floor((diff % 36e5) / 6e4), s = Math.floor((diff % 6e4) / 1e3);
+        timerDisplay.textContent = `${h < 10 ? "0"+h : h}:${m < 10 ? "0"+m : m}:${s < 10 ? "0"+s : s}`;
+    }
+    setInterval(update, 1000); update();
+}
+
+/* SCROLL INTERACTION */
+window.addEventListener('scroll', () => {
+    const s = document.documentElement, b = document.body, st = 'scrollTop', sh = 'scrollHeight';
+    if (window.scrollY > 400) document.getElementById('sticky-bar').classList.add('show');
+    else document.getElementById('sticky-bar').classList.remove('show');
+});
+
+/* REVEAL OBSERVER */
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+startTimer();
+
+function openModal() {
+    document.getElementById('bookModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+    document.getElementById('bookModal').classList.remove('active');
+    document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+});
+
+</script>
+
+
+<!-- BOOK PREVIEW MODAL -->
+<div class="modal-overlay" id="bookModal" onclick="if(event.target===this)closeModal()">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div class="modal-header">&#128065; Inside Preview &mdash; Becoming Her</div>
+        <div class="modal-body">
+            <div class="modal-cover-row">
+                <img src="https://res.cloudinary.com/di1yyz1yi/image/upload/f_auto,q_auto/small_size_cover_becoming_her_qvdl3v" alt="Becoming Her" class="modal-cover-img">
+                <div>
+                    <div class="modal-book-title">Becoming Her</div>
+                    <div class="modal-book-sub">Mastering Detachment, Discipline &amp; Identity</div>
+                    <div class="modal-pages">30 Pages &nbsp;&bull;&nbsp; 5 Modules &nbsp;&bull;&nbsp; 6 Worksheets</div>
+                </div>
+            </div>
+
+            <div class="modal-section-title">What&rsquo;s Inside</div>
+            <ul class="toc-list">
+                <li class="toc-module">I. Identity</li>
+                <li class="toc-item">The Mirror Reality <span>07</span></li>
+                <li class="toc-item">The Delusion Factor <span>08</span></li>
+                <li class="toc-item">Worksheet: Identity Script <span>10</span></li>
+
+                <li class="toc-module">II. Routine</li>
+                <li class="toc-item">Morning Protocol <span>13</span></li>
+                <li class="toc-item">Evening Protocol <span>14</span></li>
+                <li class="toc-item">Worksheet: The Ideal Day <span>15</span></li>
+
+                <li class="toc-module">III. Aesthetic</li>
+                <li class="toc-item">High Maintenance to Be Low Maintenance <span>17</span></li>
+                <li class="toc-item">The Uniform &mdash; Capsule Wardrobe <span>18</span></li>
+                <li class="toc-item">Siren Body Language <span>19</span></li>
+
+                <li class="toc-module">IV. Environment</li>
+                <li class="toc-item">The Sanctuary &mdash; Room Reset <span>22</span></li>
+                <li class="toc-item">The Social Detox <span>23</span></li>
+                <li class="toc-item">Worksheet: Vision Board <span>24</span></li>
+
+                <li class="toc-module">V. The 60-Day Challenge</li>
+                <li class="toc-item">The 60-Day Contract <span>26</span></li>
+                <li class="toc-item">Tracker: Consistency Grid <span>27</span></li>
+            </ul>
+
+            <div class="modal-section-title">Sample Page</div>
+            <div class="sample-box">
+                <div class="sample-label">From: The Mirror Reality &mdash; Module 01</div>
+                <div class="sample-text">
+                    &ldquo;Life is a merciless mirror. If you hate the reflection, stop screaming at the glass. You must change the object standing in front of it. Do not &lsquo;try&rsquo; to change. Shift. Embody her physics immediately. Reality has no choice but to conform.&rdquo;
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-cta-section">
+            <div class="modal-price-row">
+                <span class="modal-was">$18.90</span>
+                <span class="modal-is">$9.45</span>
+                <span class="modal-badge">50% OFF</span>
+            </div>
+            <a href="https://gumroad.com/checkout?product=itlis&quantity=1" class="modal-buy-btn">GET INSTANT ACCESS &mdash; $9.45</a>
+            <p class="modal-guarantee">&bull; Instant PDF download &nbsp;&bull;&nbsp; Secure checkout via Gumroad &nbsp;&bull;&nbsp; 256-bit SSL</p>
+        </div>
+    </div>
+</div>
+
+<!-- BOOK PREVIEW MODAL -->
+<div class="modal-overlay" id="previewModal" onclick="if(event.target===this)closeModal()">
+    <div class="modal-box" style="position:relative;">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+
+        <div class="modal-header">
+            <img class="modal-cover" src="https://res.cloudinary.com/di1yyz1yi/image/upload/f_auto,q_auto/small_size_cover_becoming_her_qvdl3v" alt="Becoming Her">
+            <div>
+                <div class="modal-title">Becoming Her</div>
+                <div class="modal-subtitle">30 Pages &nbsp;&bull;&nbsp; 5 Modules &nbsp;&bull;&nbsp; Instant PDF</div>
+            </div>
+        </div>
+
+        <div class="modal-section">
+            <div class="modal-section-title">What&rsquo;s Inside</div>
+
+            <div class="modal-toc-module">I. Identity</div>
+            <div class="modal-toc-item"><span class="modal-toc-label">The Mirror Reality</span><span>p.07</span></div>
+            <div class="modal-toc-item"><span class="modal-toc-label">The Delusion Factor</span><span>p.08</span></div>
+            <div class="modal-toc-item"><span class="modal-toc-label">The 3 Rules of Self-Concept</span><span>p.09</span></div>
+            <div class="modal-toc-item"><span class="modal-toc-label">Worksheet: Identity Script</span><span>p.10</span></div>
+
+            <div class="modal-toc-module">II. Routine</div>
+            <div class="modal-toc-item"><span class="modal-toc-label">Quiet Discipline</span><span>p.12</span></div>
+            <div class="modal-toc-item"><span class="modal-toc-label">The Morning Protocol</span><span>p.13</span></div>
+            <div class="modal-toc-item"><span class="modal-toc-label">The Evening Protocol</span><span>p.14</span></div>
+            <div class="modal-toc-item"><span class="modal-toc-label">Worksheet: The Ideal Day</span><span>p.15</span></div>
+
+            <div class="modal-toc-module">III. Aesthetic</div>
+            <div class="modal-toc-item"><span class="modal-toc-label">High Maintenance to Be Low Maintenance</span><span>p.17</span></div>
+            <div class="modal-toc-item"><span class="modal-toc-label">The Uniform &mdash; Black. White. Beige.</span><span>p.18</span></div>
+            <div class="modal-toc-item"><span class="modal-toc-label">Siren Body Language</span><span>p.19</span></div>
+            <div class="modal-toc-item"><span class="modal-toc-label">Worksheet: Glow Up List</span><span>p.20</span></div>
+
+            <div class="modal-toc-module">IV. Environment</div>
+            <div class="modal-toc-item"><span class="modal-toc-label">The Sanctuary &mdash; Hotel-ify Your Space</span><span>p.22</span></div>
+            <div class="modal-toc-item"><span class="modal-toc-label">The Social Detox</span><span>p.23</span></div>
+            <div class="modal-toc-item"><span class="modal-toc-label">Worksheet: Vision Board</span><span>p.24</span></div>
+
+            <div class="modal-toc-module">V. The 60-Day Challenge</div>
+            <div class="modal-toc-item"><span class="modal-toc-label">The 60-Day Contract (5 Non-Negotiables)</span><span>p.26</span></div>
+            <div class="modal-toc-item"><span class="modal-toc-label">Tracker: Consistency Grid</span><span>p.27</span></div>
+        </div>
+
+
+
+        <div class="modal-cta-wrap">
+            <a href="https://gumroad.com/checkout?product=itlis&quantity=1" class="modal-cta">Get Instant Access &mdash; $9.45</a>
+            <div class="modal-price-note">Instant PDF download &nbsp;&bull;&nbsp; Secure checkout via Gumroad</div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openModal() {
+    document.getElementById('previewModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+    document.getElementById('previewModal').classList.remove('open');
+    document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+</script>
+</body>
+</html>
